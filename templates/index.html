@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Recommender - Find Your Perfect Course</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Course Recommender</h1>
+            <p>Discover personalized course recommendations powered by AI</p>
+        </div>
+        
+        <div class="glass-card">
+            <form method="POST" action="/recommend" id="recommendationForm">
+                <div class="form-group">
+                    <label for="background">Your Background</label>
+                    <textarea 
+                        id="background"
+                        name="background" 
+                        class="form-control" 
+                        placeholder="Tell us about your education, work experience, and current skills..."
+                        required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="career_goal">Career Goal</label>
+                    <input 
+                        type="text" 
+                        id="career_goal"
+                        name="career_goal" 
+                        class="form-control" 
+                        placeholder="What career path are you aiming for? (e.g., Data Scientist, Web Developer, UX Designer)"
+                        required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="interests">Areas of Interest</label>
+                    <input 
+                        type="text" 
+                        id="interests"
+                        name="interests" 
+                        class="form-control" 
+                        placeholder="What topics or technologies interest you? (e.g., Python, Machine Learning, Design)"
+                        required>
+                </div>
+                
+                <button type="submit" class="btn-primary">
+                    <span class="btn-text">Get Personalized Recommendations</span>
+                    <span class="loading" style="display: none;"></span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Form submission with loading state
+        document.getElementById('recommendationForm').addEventListener('submit', function(e) {
+            const button = this.querySelector('.btn-primary');
+            const btnText = button.querySelector('.btn-text');
+            const loading = button.querySelector('.loading');
+            
+            // Show loading state
+            btnText.style.display = 'none';
+            loading.style.display = 'inline-block';
+            button.disabled = true;
+            
+            // Re-enable after a delay (in case of errors)
+            setTimeout(() => {
+                btnText.style.display = 'inline';
+                loading.style.display = 'none';
+                button.disabled = false;
+            }, 10000);
+        });
+
+        // Add focus effects
+        document.querySelectorAll('.form-control').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
