@@ -1,0 +1,9 @@
+Flask
+pandas
+scikit-learn
+groq
+numpy
+sentence-transformers
+torch
+transformers
+python-dotenv
