@@ -15,7 +15,6 @@ An intelligent course recommendation system that leverages **semantic embeddings
 
 https://github.com/user-attachments/assets/e1aca1d0-380a-4ae4-a247-427159220cd1
 
-
 *Interactive demonstration of AI-powered course matching*
 
 ### ✨ Key Features
@@ -29,7 +28,7 @@ https://github.com/user-attachments/assets/e1aca1d0-380a-4ae4-a247-427159220cd1
 
 ## 🏗️ Architecture
 
-
+```mermaid
 graph LR
     A[👤 Student Input] --> B[📝 Text Processing]
     B --> C[🧠 Semantic Embeddings]
@@ -46,7 +45,7 @@ graph LR
     style G fill:#fff3e0
     style H fill:#f3e5f5
     style I fill:#fce4ec
-
+```
 
 ## 🛠️ Technical Stack
 
