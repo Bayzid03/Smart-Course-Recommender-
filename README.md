@@ -30,9 +30,22 @@ https://github.com/user-attachments/assets/e1aca1d0-380a-4ae4-a247-427159220cd1
 ## 🏗️ Architecture
 
 ```
-Student Input → Text Processing → Semantic Embeddings → Cosine Similarity → AI Explanations → Results
-     ↓                                    ↓                    ↓
- Flask Backend              SentenceTransformers        Groq API Integration
+graph LR
+    A[👤 Student Input] --> B[📝 Text Processing]
+    B --> C[🧠 Semantic Embeddings]
+    C --> D[📊 Cosine Similarity]
+    D --> E[🤖 AI Explanations]
+    E --> F[✨ Results Display]
+    
+    B -.-> G[🌐 Flask Backend]
+    C -.-> H[🤗 SentenceTransformers]
+    E -.-> I[⚡ Groq API]
+    
+    style A fill:#e1f5fe
+    style F fill:#e8f5e8
+    style G fill:#fff3e0
+    style H fill:#f3e5f5
+    style I fill:#fce4ec
 ```
 
 ## 🛠️ Technical Stack
@@ -202,4 +215,5 @@ MIT License - See [LICENSE](LICENSE) for details.
 ---
 
 **Intelligent course discovery through the power of semantic AI** 🎯✨
+
 
