@@ -13,8 +13,8 @@ An intelligent course recommendation system that leverages **semantic embeddings
 
 ## 🎬 Live Demo
 
-![Course Recommender Demo](![CourseRecommendationAPP-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/e1aca1d0-380a-4ae4-a247-427159220cd1)
-)
+https://github.com/user-attachments/assets/e1aca1d0-380a-4ae4-a247-427159220cd1
+
 
 *Interactive demonstration of AI-powered course matching*
 
@@ -202,3 +202,4 @@ MIT License - See [LICENSE](LICENSE) for details.
 ---
 
 **Intelligent course discovery through the power of semantic AI** 🎯✨
+
